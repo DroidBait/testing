@@ -14,6 +14,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'w0rp/ale'
+Plugin 'Gundo'
 
 syntax on
 set number
@@ -24,6 +25,9 @@ set laststatus=2
 if !has('gui_running')
 		  set t_Co=256
   endif
+nnoremap <F5> :GundoToggle<CR>
+let g:gundo_prefer_python3 = 1
+colorscheme badwolf
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
